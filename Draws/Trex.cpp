@@ -51,10 +51,11 @@ bool Trex::CollisionCheck(const Rect & target)
 	D3DXVECTOR2 tpos = target.Position();
 	D3DXVECTOR2 tscl = target.Scale();
 
-	if (spos.x + sscl.x / 2 > tpos.x - tscl.x / 2 &&
-		spos.x - sscl.x / 2 < tpos.x + tscl.x / 2 &&
-		spos.y + sscl.y / 2 > tpos.y - tscl.y / 2 &&
-		spos.y - sscl.y / 2 < tpos.y + tscl.y / 2) {
+	int frame = 3;
+	if (spos.x + sscl.x / 2-frame > tpos.x - tscl.x / 2+ frame &&
+		spos.x - sscl.x / 2+ frame < tpos.x + tscl.x / 2- frame &&
+		spos.y + sscl.y / 2- frame > tpos.y - tscl.y / 2+ frame &&
+		spos.y - sscl.y / 2+ frame < tpos.y + tscl.y / 2- frame) {
 		return true;
 	}
 	return false;

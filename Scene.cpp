@@ -7,7 +7,7 @@
 Trex* trex;
 vector<Cactus*> cactus;
 vector<Ground*> ground;
-float speed = 150.0f;
+float speed = 350.0f;
 float score = 0;
 
 void InitScene() {
@@ -24,8 +24,38 @@ void InitScene() {
 		Cactus* ctemp = new Cactus(L"../_Shaders/007_Texture.fx", L"../_Textures/Trex/Cactus1.png");
 		ctemp->Scale(17, 35);
 
-		float x = ctemp->Scale().x * 0.5f + 400;
+		float x = ctemp->Scale().x * 0.5f - 400;
 		float y = ctemp->Scale().y * 0.5f + (Height / 2 - 12);
+		ctemp->Position(x, y);
+
+		ctemp->Speed(&speed);
+
+		cactus.push_back(ctemp);
+
+		ctemp = new Cactus(L"../_Shaders/007_Texture.fx", L"../_Textures/Trex/Cactus2.png");
+		ctemp->Scale(24, 50);
+
+		x = ctemp->Scale().x * 0.5f - 500;
+		ctemp->Position(x, y);
+
+		ctemp->Speed(&speed);
+
+		cactus.push_back(ctemp);
+
+		ctemp = new Cactus(L"../_Shaders/007_Texture.fx", L"../_Textures/Trex/Cactus3.png");
+		ctemp->Scale(29, 47);
+
+		x = ctemp->Scale().x * 0.5f - 600;
+		ctemp->Position(x, y);
+
+		ctemp->Speed(&speed);
+
+		cactus.push_back(ctemp);
+
+		ctemp = new Cactus(L"../_Shaders/007_Texture.fx", L"../_Textures/Trex/Cactus4.png");
+		ctemp->Scale(37, 49);
+
+		x = ctemp->Scale().x * 0.5f - 700;
 		ctemp->Position(x, y);
 
 		ctemp->Speed(&speed);
@@ -96,15 +126,25 @@ void Update() {
 		g->ViewProjection(V, P);
 		g->Update();
 	}
-}
 
+	// Collision Check between Trex and cactus
+	for (auto c : cactus) {
+		if (trex->CollisionCheck(*c)) {
+			speed = 0;
+			MessageBox(Hwnd, L"Game Over", L"Game Over", MB_OK);
+			exit(0);
+		}
+	}
+
+	score += speed * Time::Delta();
+}
 
 void Render() {
 	D3DXCOLOR bgColor = D3DXCOLOR(.97f, .97f, .97f, 1);
 	DeviceContext->ClearRenderTargetView(RTV, (float*)bgColor);
 	{
-		ImGui::Text("Score: %d", score);
-		ImGui::SliderFloat("Speed", &speed, 0.0f, 400.0f);
+		ImGui::Text("Score: %.0f", score);
+		ImGui::SliderFloat("Speed", &speed, 0.0f, 700.0f);
 
 		for (auto g : ground) {
 			g->Render();
