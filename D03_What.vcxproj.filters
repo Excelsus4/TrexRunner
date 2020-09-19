@@ -30,18 +30,26 @@
     <ClCompile Include="Systems\Device.cpp">
       <Filter>Systems</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="Draws\Cactus.cpp">
+    <ClCompile Include="Draws\Clip.cpp">
       <Filter>Draws</Filter>
     </ClCompile>
-    <ClCompile Include="Draws\Ground.cpp">
+    <ClCompile Include="Draws\Sprite.cpp">
       <Filter>Draws</Filter>
     </ClCompile>
-    <ClCompile Include="Draws\ShiftingObject.cpp">
-      <Filter>Draws</Filter>
+    <ClCompile Include="GameObject\Cactus.cpp">
+      <Filter>GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="Draws\Trex.cpp">
-      <Filter>Draws</Filter>
+    <ClCompile Include="GameObject\Ground.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Trex.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\GameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Bird.cpp">
+      <Filter>GameObject</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -73,18 +81,26 @@
     <ClInclude Include="Systems\Device.h">
       <Filter>Systems</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="Draws\Cactus.h">
+    <ClInclude Include="Draws\Clip.h">
       <Filter>Draws</Filter>
     </ClInclude>
-    <ClInclude Include="Draws\Ground.h">
+    <ClInclude Include="Draws\Sprite.h">
       <Filter>Draws</Filter>
     </ClInclude>
-    <ClInclude Include="Draws\ShiftingObject.h">
-      <Filter>Draws</Filter>
+    <ClInclude Include="GameObject\Cactus.h">
+      <Filter>GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="Draws\Trex.h">
-      <Filter>Draws</Filter>
+    <ClInclude Include="GameObject\Ground.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\Trex.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\GameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\Bird.h">
+      <Filter>GameObject</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +115,9 @@
     </Filter>
     <Filter Include="Draws">
       <UniqueIdentifier>{24e7ef25-ead8-479a-a1d1-50046cc9913e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{0e19018f-b463-42f6-bf0a-d8ef1ae50370}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

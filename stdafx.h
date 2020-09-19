@@ -30,6 +30,10 @@ using namespace std;
 #include "Systems/Keyboard.h"
 #include "Systems/Time.h"
 
+#include "Draws/Rect.h"
+#include "Draws/Sprite.h"
+#include "Draws/Clip.h"
+
 #include "Utilities/Math.h"
 #include "Utilities/Path.h"
 #include "Utilities/String.h"
@@ -41,6 +45,8 @@ using namespace std;
 const UINT Width = 1024;
 const UINT Height = 768;
 
+const wstring Textures = L"../_Textures/";
+const wstring Shaders = L"../_Shaders/";
 
 extern HWND Hwnd;
 extern wstring Title;
