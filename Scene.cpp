@@ -2,8 +2,10 @@
 #include "./Systems/Device.h"
 #include "./GameObject/Ground.h"
 #include "./GameObject/Trex.h"
+#include "./GameObject/Cactus.h"
 
 Trex* character;
+vector<Cactus*> cactus;
 vector<Ground*> grounds;
 float speed = 350.0f;
 float score = 0;
@@ -14,6 +16,11 @@ void InitScene() {
 	{
 		grounds.push_back(new Ground(shaderFile, Textures + L"Trex/Floor.png", D3DXVECTOR2(0, Height / 2 - 4), &speed));
 		grounds.push_back(new Ground(shaderFile, Textures + L"Trex/Floor.png", D3DXVECTOR2(1200, Height / 2 - 4), &speed));
+	}
+
+	{
+		cactus.push_back(new Cactus(shaderFile, Textures + L"Trex/Cactus1.png", 
+			D3DXVECTOR2(600, Height / 2 + 12), D3DXVECTOR2(17, 35), &speed));
 	}
 
 	{
@@ -53,6 +60,9 @@ void Update() {
 	for (auto g : grounds) {
 		g->Update(V, P);
 	}
+	for (auto c : cactus) {
+		c->Update(V, P);
+	}
 	character->Update(V, P);
 
 	score += speed * Time::Delta();
@@ -67,6 +77,9 @@ void Render() {
 
 		for (auto g : grounds) {
 			g->Render();
+		}
+		for (auto c : cactus) {
+			c->Render();
 		}
 		character->Render();
 	}
