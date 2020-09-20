@@ -39,7 +39,7 @@ void GameObject::Size(D3DXVECTOR2 vec)
 
 bool GameObject::CollisionCheck(const GameObject & target) const
 {
-	const int margin = 3;
+	const int margin = 6;
 
 	if (position.x + size.x / 2 - margin > target.position.x - target.size.x / 2 + margin &&
 		position.x - size.x / 2 + margin < target.position.x + target.size.x / 2 - margin &&

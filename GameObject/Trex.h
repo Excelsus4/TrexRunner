@@ -1,7 +1,7 @@
 #pragma once
 #include "GameObject.h"
 
-class Trex : GameObject
+class Trex : public GameObject
 {
 public:
 	Trex(wstring shaderFile, wstring spriteFile, D3DXVECTOR2 pos, float sFactor);

@@ -147,14 +147,12 @@
     <ClCompile Include="Draws\Clip.cpp" />
     <ClCompile Include="Draws\Rect.cpp" />
     <ClCompile Include="Draws\Sprite.cpp" />
-    <ClCompile Include="GameObject\Bird.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="GameObject\Cactus.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="GameObject\GameObject.cpp" />
     <ClCompile Include="GameObject\Ground.cpp" />
+    <ClCompile Include="GameObject\RandomShooter.cpp" />
     <ClCompile Include="GameObject\Trex.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
@@ -176,14 +174,12 @@
     <ClInclude Include="Draws\Clip.h" />
     <ClInclude Include="Draws\Rect.h" />
     <ClInclude Include="Draws\Sprite.h" />
-    <ClInclude Include="GameObject\Bird.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClInclude>
     <ClInclude Include="GameObject\Cactus.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="GameObject\GameObject.h" />
     <ClInclude Include="GameObject\Ground.h" />
+    <ClInclude Include="GameObject\RandomShooter.h" />
     <ClInclude Include="GameObject\Trex.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>

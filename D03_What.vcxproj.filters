@@ -48,7 +48,7 @@
     <ClCompile Include="GameObject\GameObject.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject\Bird.cpp">
+    <ClCompile Include="GameObject\RandomShooter.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
   </ItemGroup>
@@ -99,7 +99,7 @@
     <ClInclude Include="GameObject\GameObject.h">
       <Filter>GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject\Bird.h">
+    <ClInclude Include="GameObject\RandomShooter.h">
       <Filter>GameObject</Filter>
     </ClInclude>
   </ItemGroup>

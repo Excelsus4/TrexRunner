@@ -23,11 +23,10 @@ void Ground::Update(D3DXMATRIX & V, D3DXMATRIX & P)
 	// When ground is out of place, return cartridge
 	if (pos.x < scl.x / 2 - 1200) {
 		pos.x += 2400;
-		Position(pos);
 	}
-	else {
-		Position(pos);
-	}
+
+	// Confirm Pos
+	Position(pos);
 
 	sprite->Position(Position());
 	sprite->Update(V, P);
